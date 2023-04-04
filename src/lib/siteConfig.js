@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://swyxkit.netlify.app';
+export const SITE_URL = 'https://tensoroverflow.netlify.app';
 export const APPROVED_POSTERS_GH_USERNAME = ['rand'];
 export const GH_USER_REPO = 'rand/tensoroverflow'; // used for pulling github issues and offering comments
 export const SITE_TITLE = 'tensoroverflow';
