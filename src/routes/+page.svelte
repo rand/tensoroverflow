@@ -1,5 +1,5 @@
 <script>
-//	import Newsletter from '../components/Newsletter.svelte';
+	import Newsletter from '../components/Newsletter.svelte';
 	import FeatureCard from '../components/FeatureCard.svelte';
 	import LatestPosts from '../components/LatestPosts.svelte';
 	import {
