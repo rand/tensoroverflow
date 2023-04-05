@@ -20,7 +20,7 @@
 
 	/** @type {import('./$types').PageData} */
 	export let data;
-	
+
 	/** @type {import('$lib/types').ContentItem} */
 	$: json = data.json; // warning: if you try to destructure content here, make sure to make it reactive, or your page content will not update when your user navigates
 
@@ -58,8 +58,8 @@
 	{#if json.subtitle}
 		<meta property="subtitle" content={json.subtitle} />
 	{/if}
-	<meta name="Description" content={json.description || 'swyxkit blog'} />
-	<meta property="og:description" content={json.description || 'swyxkit blog'} />
+	<meta name="Description" content={json.description || 'tensoroverflow blog'} />
+	<meta property="og:description" content={json.description || 'tensoroverflow blog'} />
 	<meta name="twitter:card" content={json.image ? 'summary_large_image' : 'summary'} />
 	<meta name="twitter:creator" content={'@' + MY_TWITTER_HANDLE} />
 	<meta name="twitter:title" content={json.title} />
@@ -77,7 +77,7 @@
 	<div
 		class="flex justify-between w-full mt-2 bg border-red sm:items-start md:flex-row md:items-center"
 	>
-		<p class="flex items-center text-sm text-gray-700 dark:text-gray-300">swyx</p>
+		<p class="flex items-center text-sm text-gray-700 dark:text-gray-300">rand</p>
 		<p class="flex items-center text-sm text-gray-600 dark:text-gray-400">
 			<a href={json.ghMetadata.issueUrl} rel="external noreferrer" class="no-underline" target="_blank">
 				<!-- <span class="mr-4 font-mono text-xs text-gray-700 text-opacity-70 dark:text-gray-300"
@@ -96,7 +96,7 @@
 <div class="max-w-2xl mx-auto">
 	{#if json?.tags?.length}
 		<p class="!text-slate-400 flex-auto mb-4 italic">
-			Tagged in: 
+			Tagged in:
 			{#each json.tags as tag}
 				<span class="px-1">
 					<a href={`/blog?filter=hashtag-${tag}`}>#{tag}</a>
@@ -118,7 +118,7 @@
 	<div class="mb-8 text-black dark:text-white " bind:this={commentsEl} use:utterances={{number: issueNumber}}>
 		Loading comments...
 		<!-- svelte-ignore a11y-mouse-events-have-key-events -->
-		<button class="my-4 bg-blue-200 hover:bg-blue-100 text-black p-2 rounded-lg" 
+		<button class="my-4 bg-blue-200 hover:bg-blue-100 text-black p-2 rounded-lg"
 			on:click={() => injectScript(commentsEl, issueNumber)}
 			on:mouseover={() => injectScript(commentsEl, issueNumber)}
 		>Load now</button>
@@ -140,7 +140,7 @@
 			--feature: minmax(0, 5rem);
 
 			display: grid;
-			grid-template-columns: 
+			grid-template-columns:
 				[full-start] var(--full)
 				[feature-start] 0rem
 				[popout-start] 0rem

@@ -41,9 +41,9 @@
 	// https://github.com/sw-yx/swyxkit/pull/171
 	// this will be slow if you have thousands of items, but most people don't
 	let isTruncated = items?.length > 20;
-	
-	
-	
+
+
+
 	// we are lazy loading a fuzzy search function
 	// with a fallback to a simple filter function
 	let loaded = false;
@@ -87,8 +87,7 @@
 		{SITE_TITLE} Blog
 	</h1>
 	<p class="mb-4 text-gray-600 dark:text-gray-400">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sunt reprehenderit alias rerum
-		dolor impedit. In total, I've written {items.length} articles on my blog. Use the search below to
+		Use the search below to
 		filter by title.
 	</p>
 	<div class="relative mb-4 w-full">
